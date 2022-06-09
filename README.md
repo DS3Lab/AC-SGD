@@ -81,7 +81,7 @@ Code associated with the paper [**Fine-tuning Language Models over Slow Networks
   ```
   Modify "--dist-url", "--world-size" and "--pipeline-group-size" before running.
   
-  Complete examples can be found "./run_lm.sh" and "./run_deberta.sh", which simulate on a single machine with 8 GPUs.
+  Complete examples can be found "./run_lm.sh" and "./run_deberta.sh".
   
   
 ## Arguments
@@ -100,8 +100,8 @@ Code associated with the paper [**Fine-tuning Language Models over Slow Networks
 - "--forward-compress-method": "none", "fixpoint", "delta", or "delta-lowbits".
   - "none": do not compress.
   - "fixpoint": direct compress the activations. need to specify "--forward-bits".
-  - "delta": compress and communicate the delta of activations. need to specify "--forward-bits" and "--max_activation_cache_size".
-  - "delta-lowbits": in addition to "delta", it also compresses the local cache (previous activations). need to specify "--forward-bits", "--forward-bits-act", and "--max_activation_cache_size".
+  - "delta": compress and communicate the delta of activations. need to specify "--forward-bits" and "--max-activation-cache-size".
+  - "delta-lowbits": in addition to "delta", it also compresses the local cache (previous activations). need to specify "--forward-bits", "--forward-bits-act", and "--max-activation-cache-size".
 - "--backward-compress-method": "none" or "fixpoint".
   - "none": do not compress.
   - "fixpoint": direct compress the gradients. need to specify "--backward-bits".

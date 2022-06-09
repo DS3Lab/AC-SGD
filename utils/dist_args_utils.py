@@ -97,7 +97,7 @@ def add_acitvation_compression_arguments(parser):
     parser.add_argument('--forward-scale-dims', type=lambda x: tuple(int(i) for i in x.lstrip('(').rstrip(')').split(',') if i.strip() != ''), 
                         default=(0,1), metavar='N',
                         help='-')
-    parser.add_argument('--max_activation_cache_size', type=int, default=20000, metavar='N',
+    parser.add_argument('--max-activation-cache-size', type=int, default=20000, metavar='N',
                         help='max activation cache size. should be larger than the number of training examples.')
     parser.add_argument('--backward-compress-method', type=str, default='none', metavar='N',
                         help='-')
