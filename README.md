@@ -4,6 +4,30 @@ Code associated with the paper [**Fine-tuning Language Models over Slow Networks
 
 ## Setup:
 
+### Use AWS AMI
+
+- Launch instances from [our AMI](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#ImageDetails:imageId=ami-02870383e79fd0a48).
+
+- Activate Pytorch env:
+  ```bash
+  source activate pytorch_p38
+  ```
+
+- Update code (Optional):
+  ```bash
+  cd AC-SGD
+  git pull
+  ```
+  
+- Setup network configuration:
+
+  ```bash
+  export GLOO_SOCKET_IFNAME=ens3
+  export NCCL_SOCKET_IFNAME=ens3
+  ```
+
+### Setup Manually
+
 - Create environment:
 
   ```bash
