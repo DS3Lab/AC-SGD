@@ -1,7 +1,7 @@
 # Activation Compression with Guarantees
 
 We explore how to fine-tune language models over slow networks using activation compression with guarantees. 
-This is a research project developed by [DS3Lab@ETH Zurich](https://ds3lab.inf.ethz.ch/) and [CRFM@Stanford](https://crfm.stanford.edu/).
+This is a research project developed by [DS3Lab@ETH Zurich](https://ds3lab.inf.ethz.ch/) and [HazyResearch@Stanford](https://hazyresearch.stanford.edu/).
 
 ## Cite Our Paper
 
