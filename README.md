@@ -1,10 +1,32 @@
-# AC-SGD
+# Activation Compression with Guarantees
 
-Code associated with the paper [**Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees**](https://arxiv.org/abs/2206.01299).
+We explore how to fine-tune language models over slow networks using activation compression with guarantees. 
+This is a research project developed by [DS3Lab@ETH Zurich](https://ds3lab.inf.ethz.ch/) and [CRFM@Stanford](https://crfm.stanford.edu/).
+
+## Cite Our Paper
+
+```bibtex
+@article{jue2022fine,
+  title={Fine-tuning Language Models over Slow Networks using Activation Compression with Guarantees}, 
+  author={Jue Wang, Binhang Yuan, Luka Rimanic, Yongjun He, Tri Dao, Beidi Chen, Christopher Re, Ce Zhang},
+  year={2022},
+  eprint={2206.01299},
+  archivePrefix={arXiv},
+  primaryClass={cs.DC}
+}
+```
+
+## AWS AMI
+
+You can directly use our AWS AMI for easy configuration: 
+
+| AMI Name       | AMI ID                | Region    | Recommended Instances                |
+|----------------|-----------------------|-----------|--------------------------------------|
+| 	ac-sgd-jun-9  | ami-02870383e79fd0a48 | us-west-2 | p3.2xlarge, p3.8xlarge, p3.16xlarge  |
 
 ## Setup:
 
-### Use AWS AMI
+### Use Our AWS AMI (Recommended)
 
 - Launch instances from [our AMI](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#ImageDetails:imageId=ami-02870383e79fd0a48).
 
