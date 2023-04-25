@@ -9,7 +9,10 @@ from comm.comm_utils import *
     
 def get_arxiv21_train_data_loader(args, tokenizer, num_workers=0):
     
-    data = load_from_disk("./data/arxiv_abs_21_train")
+    if os.path.isdir("./data/arxiv_abs_21_train"):
+        data = load_from_disk("./data/arxiv_abs_21_train")
+    else:
+        data = load_dataset("ds3lab/ac-sgd-arxiv21", split="train")
     encodings = tokenizer("\n\n".join(
         [t.strip() for t in data["abstract"]]
     ), return_tensors="pt")
@@ -61,7 +64,10 @@ def get_arxiv21_train_data_loader(args, tokenizer, num_workers=0):
     
 def get_arxiv21_test_data_loader(args, tokenizer, num_workers=0):
     
-    data = load_from_disk("./data/arxiv_abs_21_test")
+    if os.path.isdir("./data/arxiv_abs_21_test"):
+        data = load_from_disk("./data/arxiv_abs_21_test")
+    else:
+        data = load_dataset("ds3lab/ac-sgd-arxiv21", split="test")
     encodings = tokenizer("\n\n".join(
         [t.strip() for t in data["abstract"]]
     ), return_tensors="pt")
