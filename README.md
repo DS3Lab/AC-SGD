@@ -16,39 +16,7 @@ This is a research project developed by [DS3Lab@ETH Zurich](https://ds3lab.inf.e
 }
 ```
 
-## AWS AMI
-
-You can directly use our AWS AMI for easy configuration: 
-
-| AMI Name       | AMI ID                | Region    | Recommended Instances                |
-|----------------|-----------------------|-----------|--------------------------------------|
-| 	ac-sgd-jun-9  | ami-02870383e79fd0a48 | us-west-2 | p3.2xlarge, p3.8xlarge, p3.16xlarge  |
-
 ## Setup:
-
-### Use Our AWS AMI (Recommended)
-
-- Launch instances from [our AMI](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#ImageDetails:imageId=ami-02870383e79fd0a48).
-
-- Activate Pytorch env:
-  ```bash
-  source activate pytorch_p38
-  ```
-
-- Update code (Optional):
-  ```bash
-  cd AC-SGD
-  git pull
-  ```
-  
-- Setup network configuration:
-
-  ```bash
-  export GLOO_SOCKET_IFNAME=ens3
-  export NCCL_SOCKET_IFNAME=ens3
-  ```
-
-### Setup Manually
 
 - Create environment:
 
