@@ -74,13 +74,6 @@ You can directly use our AWS AMI for easy configuration:
   pip3 install sentencepiece==0.1.96 # required by deberta
   ```
   
-- Download datasets:
-
-  ```bash
-  wget https://gpt-activation-compression.s3.us-east-2.amazonaws.com/data.zip
-  unzip data.zip
-  ```
-  
 - Setup network configuration:
 
   ```bash
