@@ -44,7 +44,11 @@ def wikitext_detokenize(string):
     
 def get_wikitext_train_data_loader(args, tokenizer, num_workers=0):
     
-    data = load_from_disk("./data/wikitext/train")
+    if os.path.isdir("./data/wikitext/train"):
+        data = load_from_disk("./data/wikitext/train")
+    else:
+        data = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
+    
     encodings = tokenizer("\n\n".join(
         [wikitext_detokenize(t) for t in data["text"]]
     ), return_tensors="pt")
@@ -96,7 +100,11 @@ def get_wikitext_train_data_loader(args, tokenizer, num_workers=0):
     
 def get_wikitext_test_data_loader(args, tokenizer, num_workers=0):
     
-    data = load_from_disk("./data/wikitext/test")
+    if os.path.isdir("./data/wikitext/test"):
+        data = load_from_disk("./data/wikitext/test")
+    else:
+        data = load_dataset('wikitext', 'wikitext-2-raw-v1', split='test')
+        
     encodings = tokenizer("\n\n".join(
         [wikitext_detokenize(t) for t in data["text"]]
     ), return_tensors="pt")
